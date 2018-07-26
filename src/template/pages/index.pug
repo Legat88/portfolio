@@ -1,0 +1,98 @@
+- var pages = ['Мои работы', 'Обо мне', 'Блог', 'Авторизация'];
+- var socials = ['vk', 'github', 'linkedin'];
+- var categories = ['Frontend', 'Backend', 'WorkFlow'];
+- var frontend = ['HTML5', 'CSS3', 'JavaScript & jQuery'];
+- var backend = ['PHP', 'MySQL', 'Node.js & npm', 'Mongo.db'];
+- var workflow = ['Git', 'Gulp', 'Bower'];
+mixin skills(category)
+    if category.toLowerCase() == 'frontend'
+        each skill in frontend
+            ul.skills__list
+                li.skills__element #{skill}
+    else if category.toLowerCase() == 'backend'
+        each skill in backend
+            ul.skills__list
+                li.skills__element #{skill}
+    else if category.toLowerCase() == 'workflow'
+        each skill in workflow
+            ul.skills__list
+                li.skills__element #{skill}
+
+mixin contacts(name, value)
+    li.contacts__element
+        i(class="contacts__icon fab fa-" + name)
+        .contacts__text #{value}
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="ie-edge")
+        title Portfolio
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous")
+        link(rel="stylesheet" href="/css/app.css")
+body
+    .wrapper
+        header.header
+            .container
+                .socials
+                    ul.socials__list
+                        each social in socials
+                            li.socials__element
+                                a(href="#").socials__link
+                                    i(class="socials__pic fab fa-" + social)
+                nav.navigation
+                    button.navigation__button
+                .my-info
+                    img.my-info__photo
+                    h2.my-info__name Алексей Богданов
+                    .my-info__desc Личный сайт веб разработчика
+                .arrow-down
+        .content
+            .container
+                .info
+                    .info__left-side
+                        h1.info__title Обо мне
+                        .info__photo
+                            img.big-photo
+                        h2.info__aboutme Кто я
+                        .info__text
+                            p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                            p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+                    .info__right-side
+                        h2.interests__title Чем я могу быть вам полезен
+                        .interests__text
+                            p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+                        .skills
+                            ul.skills__categories
+                                each category in categories
+                                    li.categories__element
+                                        h3 #{category}
+                                        +skills(category)
+                .map
+                    .contacts
+                        h2.contacts__title Контакты
+                        ul.contacts__list
+                            +contacts('skype', 'legat8811')
+                            +contacts('mail', 'legat88@gmail.com')
+                            +contacts('phone', '79220101564')
+                            +contacts('location', 'Магнитогорск, ул. Жукова 7/1')
+
+    footer.footer
+        .footer__up
+            .footer__left Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, eos fuga. Aperiam cum deleniti doloremque, ducimus, earum enim eveniet ipsum, itaque magnam neque pariatur placeat porro quisquam tempora voluptate. Rerum.
+            .footer__center
+                ul.navigation__list
+                    each page in pages
+                        li.navigation__element
+                            a(href="#").navigation__link #{page}
+                ul.socials__list
+                    each social in socials
+                        li.socials__element
+                            a(href="#").socials__link
+                               i(class="socials__pic fab fa-" + social)
+            .footer__right
+                p.footer__text
+                .text__author
+        .footer__down © Алексей Богданов | Создано с любовью в LoftSchool | 2018
