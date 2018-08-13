@@ -22,7 +22,13 @@ mixin contacts(name, value)
     li.contacts__element
         i(class="contacts__icon fab fa-" + name)
         .contacts__text #{value}
+<<<<<<< HEAD
 
+=======
+mixin line(className)
+    svg
+        line(x1="0" y1="0" x2="89" y2="0" class=className)
+>>>>>>> header
 doctype html
 html(lang="ru")
     head
@@ -36,6 +42,7 @@ body
     .wrapper
         header.header
             .container
+<<<<<<< HEAD
                 .socials
                     ul.socials__list
                         each social in socials
@@ -49,19 +56,49 @@ body
                     h2.my-info__name Алексей Богданов
                     .my-info__desc Личный сайт веб разработчика
                 .arrow-down
+=======
+                .first-row
+                    .socials
+                        ul.socials__list
+                            each social in socials
+                                li.socials__element
+                                    a(href="#").socials__link
+                                        i(class="socials__pic fab fa-" + social)
+                    nav.navigation
+                        svg.navigation__button
+                            use(href="/icons/hamburger.svg")
+                .my-info
+                    .my-info__photo
+                        img(src="/img/man.jpg").my-info__img
+                    h2.my-info__name Алексей Богданов
+                    .my-info__desc Личный сайт веб разработчика
+                img(src="/icons/arrow_down.svg").arrow-down
+>>>>>>> header
         .content
             .container
                 .info
                     .info__left-side
                         h1.info__title Обо мне
+<<<<<<< HEAD
                         .info__photo
                             img.big-photo
                         h2.info__aboutme Кто я
+=======
+                        +line('h1__line')
+                        .info__photo
+                            img.big-photo
+                        h2.info__aboutme Кто я
+                        +line('h2__line')
+>>>>>>> header
                         .info__text
                             p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
                             p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
                     .info__right-side
                         h2.interests__title Чем я могу быть вам полезен
+<<<<<<< HEAD
+=======
+                        +line('h2__line')
+>>>>>>> header
                         .interests__text
                             p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
                         .skills
@@ -73,6 +110,10 @@ body
                 .map
                     .contacts
                         h2.contacts__title Контакты
+<<<<<<< HEAD
+=======
+                        +line('h2__line')
+>>>>>>> header
                         ul.contacts__list
                             +contacts('skype', 'legat8811')
                             +contacts('mail', 'legat88@gmail.com')

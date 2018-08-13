@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @font-face {
   font-family: 'Sansus';
@@ -6,6 +7,12 @@
   src:  url('/src/fonts/sansus-webissimo-regular-webfont.woff2') format('woff2'),
   url('/src/fonts/sansus-webissimo-regular-webfont.woff') format('woff');
 }
+=======
+@import "/css/common/normalize.css";
+@import "common/fonts";
+@import "common/colors";
+
+>>>>>>> header
 
 * {
   box-sizing: border-box;
@@ -15,11 +22,19 @@ html, body {
   height: 100%;
 }
 body {
+<<<<<<< HEAD
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
+=======
+  font-family: 'Roboto Regular', Arial, Helvetica, sans-serif;
+>>>>>>> header
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #fff;
   line-height: 1.42em;
+<<<<<<< HEAD
+=======
+  font-size: 16px;
+>>>>>>> header
 }
 .wrapper {
   min-height: 100%;
@@ -31,7 +46,115 @@ body {
       height: 77px;
     }
 }
+<<<<<<< HEAD
 
 h1 {
   font-size: 110px;
+=======
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.container {
+  width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-flow: column;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight:normal;
+}
+
+h1 {
+  font-family: "Sansus", sans-serif;
+  font-size: 63px;
+  text-transform: uppercase;
+  color: $black;
+  margin-top: 70px;
+  margin-bottom: 32px;
+}
+h2 {
+  font-family: "Sansus", sans-serif;
+  font-size: 35px;
+  color: $grey;
+  margin-bottom:40px;
+}
+.h1__line {
+  stroke-width: 3;
+  stroke: $black;
+}
+.h2__line {
+  stroke-width: 3;
+  stroke: $grey;
+}
+.header {
+  min-height: 600px;
+  background: url("/img/water.jpg") center no-repeat;
+  background-size: cover;
+  padding: 30px;
+}
+.first-row {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 84px;
+}
+.socials__element {
+  display: inline-block;
+  font-size: 0;
+  margin-right: 30px;
+}
+.socials__link {
+  color: #fff;
+  font-size: 23px;
+    &:hover {
+      color: $green;
+    }
+}
+.navigation__button {
+  width: 40px;
+  height: 35px;
+  color: #fff;
+  &:hover {
+    cursor: pointer;
+    color: $green;
+  }
+}
+.my-info {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items:center;
+}
+.my-info__name, .my-info__desc {
+  color: #fff;
+}
+.my-info__photo {
+  width: 142px;
+  height: 142px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom:30px;
+}
+.my-info__img {
+  position: absolute;
+  top: -2px;
+  left: -130px;
+}
+.my-info {
+  margin-bottom:138px;
+}
+.arrow-down {
+  opacity: .7;
+  &:hover {
+    cursor: pointer;
+    opacity:1;
+  }
+>>>>>>> header
 }
