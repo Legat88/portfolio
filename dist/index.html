@@ -16,22 +16,50 @@
         <div class="first-row">
           <div class="socials">
             <ul class="socials__list">
-              <li class="socials__element"><a class="socials__link" href="#"><i class="socials__pic fab fa-vk"></i></a></li>
-              <li class="socials__element"><a class="socials__link" href="#"><i class="socials__pic fab fa-github"></i></a></li>
-              <li class="socials__element"><a class="socials__link" href="#"><i class="socials__pic fab fa-linkedin"></i></a></li>
+              <li class="socials__element"><a class="socials__link" href="#">
+                  <svg class="socials__svg">
+                    <use href="/src/images/sprite.svg#vk"></use>
+                  </svg>
+                  <!--i(class="socials__pic fab fa-" + social)--></a></li>
+              <li class="socials__element"><a class="socials__link" href="#">
+                  <svg class="socials__svg">
+                    <use href="/src/images/sprite.svg#github"></use>
+                  </svg>
+                  <!--i(class="socials__pic fab fa-" + social)--></a></li>
+              <li class="socials__element"><a class="socials__link" href="#">
+                  <svg class="socials__svg">
+                    <use href="/src/images/sprite.svg#in"></use>
+                  </svg>
+                  <!--i(class="socials__pic fab fa-" + social)--></a></li>
             </ul>
           </div>
           <nav class="navigation">
             <svg class="navigation__button">
-              <use href="/icons/hamburger.svg"></use>
+              <use class="navigation__button--svg" href="/src/images/sprite.svg#hamburger"></use>
             </svg>
           </nav>
         </div>
         <div class="my-info">
+          <svg class="my-info__bg-svg">
+            <use href="/src/images/sprite.svg#portfolio_header"></use>
+          </svg>
           <div class="my-info__photo"><img class="my-info__img" src="/img/man.jpg"></div>
           <h2 class="my-info__name">Алексей Богданов</h2>
           <div class="my-info__desc">Личный сайт веб разработчика</div>
-        </div><img class="arrow-down" src="/icons/arrow_down.svg">
+        </div>
+      </div>
+      <div class="arrow-down__wrap">
+        <svg class="arrow-down">
+          <use href="/src/images/sprite.svg#arrow_down"></use>
+        </svg>
+      </div>
+      <div class="triangles">
+        <svg class="left__triangle" width="900" height="160" viewBox="0 0 900 160">
+          <polygon points="0,0 900,160 0,160"></polygon>
+        </svg>
+        <svg class="right__triangle" width="900" height="160" viewBox="0 0 900 160">
+          <polygon points="0,160 900,160 900,0"></polygon>
+        </svg>
       </div>
     </header>
     <div class="content">
@@ -143,7 +171,7 @@
         <ul class="socials__list">
           <li class="socials__element"><a class="socials__link" href="#"><i class="socials__pic fab fa-vk"></i></a></li>
           <li class="socials__element"><a class="socials__link" href="#"><i class="socials__pic fab fa-github"></i></a></li>
-          <li class="socials__element"><a class="socials__link" href="#"><i class="socials__pic fab fa-linkedin"></i></a></li>
+          <li class="socials__element"><a class="socials__link" href="#"><i class="socials__pic fab fa-in"></i></a></li>
         </ul>
       </div>
       <div class="footer__right">
